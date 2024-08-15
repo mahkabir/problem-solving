@@ -11,7 +11,9 @@ public class MaxDepthOfTree {
 
     public int maxDepth(TreeNode root) {
         if (root == null) return 0;
-        return 1 + Math.max(maxDepth(root.left), maxDepth(root.right));
+       int a =  maxDepth(root.left);
+       int b = maxDepth(root.right);
+        return 1 + Math.max(a, b);
     }
 
     public static void main(String[] args) {

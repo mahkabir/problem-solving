@@ -18,7 +18,7 @@ public class InvertBinaryTree226 {
         }
     }
 
-    public TreeNode invertTree(TreeNode root) {
+   /* public TreeNode invertTree(TreeNode root) {
         if (root == null) return null;
         TreeNode temp = root.left;
         root.left = root.right;
@@ -26,7 +26,29 @@ public class InvertBinaryTree226 {
         invertTree(root.left);
         invertTree(root.right);
         return root;
-    }
+    }*/
+   public TreeNode invertTree(TreeNode root) {
+       if (root == null) {
+           return null;
+       }
+
+       TreeNode left = invertTree(root.left);
+       TreeNode right = invertTree(root.right);
+
+       root.left = right;
+       root.right = left;
+
+       return root;
+   }
+
+      /* public TreeNode invertTree(TreeNode root) {
+           if (root == null) return null;
+           TreeNode node = new TreeNode(root.value);
+           node.right = invertTree(root.left);
+           node.left = invertTree(root.right);
+           return node;
+       }*/
+
     public static void main(String[] args) {
         InvertBinaryTree226 invertBinaryTree226 = new InvertBinaryTree226();
         TreeNode root = invertBinaryTree226.new TreeNode(4);

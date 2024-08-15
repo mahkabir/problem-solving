@@ -45,7 +45,7 @@ public class ReverseLinkedList206 {
 
 
 
-        static Node head;
+       /* static Node head;
 
         static class Node {
 
@@ -59,7 +59,7 @@ public class ReverseLinkedList206 {
             }
         }
 
-        /* Function to reverse the linked list */
+        *//* Function to reverse the linked list *//*
         Node reverse(Node node)
         {
             Node prev = null;
@@ -99,5 +99,61 @@ public class ReverseLinkedList206 {
             System.out.println("");
             System.out.println("Reversed linked list ");
             list.printList(head);
+        }*/
+       static class ListNode {
+           int val;
+           ListNode next;
+
+           ListNode(int x) {
+               val = x;
+               next = null;
+           }
+       }
+
+    /*public ListNode reverseList(ListNode head) {
+        return rev(head, null);
+    }
+
+    public ListNode rev(ListNode node, ListNode pre) {
+        if (node == null) return pre;
+        ListNode temp = node.next;
+        node.next = pre;
+        return rev(temp, node);
+    }*/
+
+    // iterative approach
+    public  ListNode reverseList(ListNode head) {
+        ListNode temp = head;
+        ListNode prev =null;
+        while (temp!=null){
+          ListNode front = temp.next;
+          temp.next = prev;
+          prev = temp;
+          temp = front;
         }
+        return prev;
+    }
+
+    public static void main(String[] args) {
+            // Create a sample linked list: 1 -> 2 -> 3 -> 4 -> 5
+            ListNode head = new ListNode(1);
+            head.next = new ListNode(2);
+            head.next.next = new ListNode(3);
+            head.next.next.next = new ListNode(4);
+            head.next.next.next.next = new ListNode(5);
+
+        ReverseLinkedList206 solution = new ReverseLinkedList206();
+
+            // Reverse the linked list
+            ListNode reversedHead = solution.reverseList(head);
+
+            // Print the reversed linked list
+            ListNode current = reversedHead;
+            while (current != null) {
+                System.out.print(current.val + " ");
+                current = current.next;
+            }
+            // Output should be: 5 4 3 2 1
+        }
+
 }
