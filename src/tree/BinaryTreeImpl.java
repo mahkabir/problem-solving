@@ -1,3 +1,5 @@
+package tree;
+
 public class BinaryTreeImpl {
 
         public static class TreeNode {

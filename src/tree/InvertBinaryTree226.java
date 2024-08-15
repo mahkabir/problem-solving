@@ -1,3 +1,5 @@
+package tree;
+
 public class InvertBinaryTree226 {
     public class TreeNode {
         int value;

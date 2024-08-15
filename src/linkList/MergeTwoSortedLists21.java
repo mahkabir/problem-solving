@@ -1,3 +1,5 @@
+package linkList;
+
 public class MergeTwoSortedLists21 {
 
     // Definition for singly-linked list.
@@ -63,7 +65,7 @@ public class MergeTwoSortedLists21 {
             list2 = new ListNode(1, new ListNode(3, new ListNode(4)));*/
 
             // Use the recursive solution to merge the lists
-          /*  MergeTwoSortedLists21 solution = new MergeTwoSortedLists21();
+          /*  linkList.MergeTwoSortedLists21 solution = new linkList.MergeTwoSortedLists21();
             ListNode mergedListRecursive = solution.mergeTwoLists(list1, list2);
             System.out.println("Merged list using recursive solution:");
             printList(mergedListRecursive);*/

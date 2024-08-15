@@ -1,4 +1,7 @@
-public class InOrderTree {
+package tree;
+
+public class PostOrderTree {
+
         public static class TreeNode {
             String data;
             TreeNode left;
@@ -11,13 +14,13 @@ public class InOrderTree {
             }
         }
 
-        public static void inOrderTraversal(TreeNode node) {
+        public static void postOrderTraversal(TreeNode node) {
             if (node == null) {
                 return;
             }
-            inOrderTraversal(node.left);
+            postOrderTraversal(node.left);
+            postOrderTraversal(node.right);
             System.out.print(node.data + ", ");
-            inOrderTraversal(node.right);
         }
 
         public static void main(String[] args) {
@@ -42,7 +45,9 @@ public class InOrderTree {
             nodeF.left = nodeG;
 
             // Traverse
-            inOrderTraversal(root);
+            postOrderTraversal(root);
         }
+
+// Java
 
 }

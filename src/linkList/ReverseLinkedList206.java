@@ -1,4 +1,4 @@
-import org.w3c.dom.Node;
+package linkList;
 
 public class ReverseLinkedList206 {
 
@@ -35,7 +35,7 @@ public class ReverseLinkedList206 {
 
 
     public static void main(String[] args) {
-        ReverseLinkedList206 solution = new ReverseLinkedList206();
+        linkList.ReverseLinkedList206 solution = new linkList.ReverseLinkedList206();
         int[] head = {2, 1, 5, 6, 2, 3};
 //        int [] result = solution.reverseList(head);
 //        System.out.println("Reverse List: " + result);
@@ -87,7 +87,7 @@ public class ReverseLinkedList206 {
         // Driver Code
         public static void main(String[] args)
         {
-            ReverseLinkedList206 list = new ReverseLinkedList206();
+            linkList.ReverseLinkedList206 list = new linkList.ReverseLinkedList206();
             list.head = new Node(85);
             list.head.next = new Node(15);
             list.head.next.next = new Node(4);
@@ -123,8 +123,8 @@ public class ReverseLinkedList206 {
 
     // iterative approach
     public  ListNode reverseList(ListNode head) {
-        ListNode temp = head;
         ListNode prev =null;
+        ListNode temp = head;
         while (temp!=null){
           ListNode front = temp.next;
           temp.next = prev;

@@ -1,3 +1,5 @@
+package tree;
+
 public class MaxDepthOfTree {
     class TreeNode {
         int val;

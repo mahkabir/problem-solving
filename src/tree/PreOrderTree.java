@@ -1,3 +1,5 @@
+package tree;
+
 public class PreOrderTree {
     public static class TreeNode {
         String data;

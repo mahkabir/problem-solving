@@ -1,5 +1,6 @@
-public class PostOrderTree {
+package tree;
 
+public class InOrderTree {
         public static class TreeNode {
             String data;
             TreeNode left;
@@ -12,13 +13,13 @@ public class PostOrderTree {
             }
         }
 
-        public static void postOrderTraversal(TreeNode node) {
+        public static void inOrderTraversal(TreeNode node) {
             if (node == null) {
                 return;
             }
-            postOrderTraversal(node.left);
-            postOrderTraversal(node.right);
+            inOrderTraversal(node.left);
             System.out.print(node.data + ", ");
+            inOrderTraversal(node.right);
         }
 
         public static void main(String[] args) {
@@ -43,9 +44,7 @@ public class PostOrderTree {
             nodeF.left = nodeG;
 
             // Traverse
-            postOrderTraversal(root);
+            inOrderTraversal(root);
         }
-
-// Java
 
 }
