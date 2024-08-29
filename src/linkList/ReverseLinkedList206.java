@@ -121,7 +121,7 @@ public class ReverseLinkedList206 {
         return rev(temp, node);
     }*/
 
-    // iterative approach
+    // iterative approach    TC o(n)   |   SC o(1)
     public  ListNode reverseList(ListNode head) {
         ListNode prev =null;
         ListNode temp = head;
