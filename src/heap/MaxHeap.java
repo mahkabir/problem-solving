@@ -18,6 +18,23 @@ public class MaxHeap {
             maxHeapify(heap, heapSize, largest);
         }
     }
+    /*public void minHeapify(int [] heap,int heapSize, int i){
+        int smallest = i;
+        int left = 2*i+1;
+        int right = 2*i+2;
+        if(left<heapSize && heap[left] < heap[smallest]){
+            smallest =left;
+        }
+       if(right<heapSize && heap[right] < heap[smallest]){
+           smallest = right;
+       }
+       while(smallest!=i){
+           int swap = heap[i];
+           heap[i] = heap[smallest];
+           heap[smallest] = heap[i];
+           minHeapify(heap,heapSize,smallest);
+       }
+    }*/
     public void buildMaxHeap(int[] heap, int heapSize) {
         int startIdx = (heapSize / 2) - 1;
         for (int i = startIdx; i >= 0; i--) {
@@ -34,10 +51,13 @@ public class MaxHeap {
         int[] arr = {3, 9, 2, 1, 4, 5};
         MaxHeap maxHeap = new MaxHeap();
        // maxHeap.buildMaxHeap(arr, arr.length);
-        maxHeap.heapSort(arr,arr.length);
+       // maxHeap.heapSort(arr,arr.length);
         /*System.out.println("Max Heap array:");
         maxHeap.printArray(arr);*/
-        System.out.println("Sorted Heap: ");
+        /*System.out.println("Sorted Heap: ");
+        maxHeap.printArray(arr);*/
+       // maxHeap.buildMaxHeap(arr,arr.length);
+        System.out.println("Min heap: ");
         maxHeap.printArray(arr);
     }
 

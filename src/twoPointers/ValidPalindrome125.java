@@ -1,9 +1,6 @@
+package twoPointers;
+
 public class ValidPalindrome125 {
-    public static void main(String[] args) {
-        String s = "A man, a plan, a canal: panama";
-        ValidPalindrome125 solution = new ValidPalindrome125();
-        System.out.println("Valid Palindrome? :"+solution.isPalindrome(s));
-    }
 
     private boolean isPalindrome(String s) {
      int i=0;
@@ -27,5 +24,10 @@ public class ValidPalindrome125 {
          j--;
      }
      return true;
+    }
+    public static void main(String[] args) {
+        String s = "A man, a plan, a canal: panama";
+        ValidPalindrome125 solution = new ValidPalindrome125();
+        System.out.println("Valid Palindrome? :"+solution.isPalindrome(s));
     }
 }
