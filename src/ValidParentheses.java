@@ -1,3 +1,5 @@
+import java.util.HashMap;
+import java.util.Map;
 import java.util.Stack;
 
 public class ValidParentheses {
@@ -24,7 +26,7 @@ public class ValidParentheses {
 
 //Solution with HashMap Lookup table as described in the video
 
-/*    class Solution {
+    class Solution {
         public boolean isValid(String s) {
             Stack<Character> brackets = new Stack<>();
             Map<Character, Character> bracketLookup = new HashMap<>(3);
@@ -48,7 +50,7 @@ public class ValidParentheses {
 
             return brackets.isEmpty();
         }
-    }*/
+    }
 public static void main(String[] args) {
     ValidParentheses validParentheses = new ValidParentheses();
    // String v =  "()[]{}";

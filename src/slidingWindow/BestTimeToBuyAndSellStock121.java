@@ -16,7 +16,7 @@ public class BestTimeToBuyAndSellStock121 {
         int n = prices.length;
         int res = 0;
         for (int i = 1; i < n; i++) {
-          minPriceSoFar = Math.min(minPriceSoFar,prices[i]);  //O(1)  T>C of Math.min,Math.max
+          minPriceSoFar = Math.min(minPriceSoFar,prices[i]);  //O(1)  T.C of Math.min,Math.max
           res = Math.max(res,prices[i]-minPriceSoFar);      // O(1)
         }
         return res;
