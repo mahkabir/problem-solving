@@ -51,7 +51,7 @@ public class MergeTwoSortedLists21 {
             ListNode list1 = new ListNode(1, new ListNode(2, new ListNode(4)));
 
             // Create the second linked list: 1 -> 3 -> 4
-            ListNode list2 = new ListNode(1, new ListNode(3, new ListNode(4)));
+            ListNode list2 = new ListNode(1, new ListNode(3, new ListNode(4,new ListNode(5,new ListNode(6)))));
 
             // Use the iterative solution to merge the lists
             MergeTwoSortedLists21 iterativeSolution = new MergeTwoSortedLists21();
