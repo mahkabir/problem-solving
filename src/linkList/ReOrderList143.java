@@ -61,7 +61,7 @@ public class ReOrderList143 {
      sln.reOrderList(head);
      ListNode current = head;
      while(current!=null){
-         System.out.println(current.val+" -> ");
+         System.out.print(current.val+" -> ");
          current = current.next;
      }
         System.out.println("null");
